@@ -1,15 +1,15 @@
 import React from 'react'
 import "../component/Popup.css";
-function Popup(props) {
+function Popup({ options, choose, clickHandler }) {
     return (
         <div className="popup-box">
             <div className="box">
-                <div >
-                    <ul className={props.options}>
-                        <li className={props.choose}>Sport</li>
-                        <li className={props.choose}>Music</li>
-                        <li className={props.choose}>Film</li>
-                        <li className={props.choose}>Television</li>
+                <div>
+                    <ul className={options}>
+                        <li className={choose} onClick={clickHandler}>Sport</li>
+                        <li className={choose} onClick={clickHandler}>Music</li>
+                        <li className={choose} onClick={clickHandler}>Film</li>
+                        <li className={choose} onClick={clickHandler}>Television</li>
                     </ul>
                 </div>
             </div>
