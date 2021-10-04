@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../components/Header.css"
 import Popup from './component/Popup';
 
-function Header() {
+function Header({ clickHandler }) {
     const [openOptions, setOpenOptions] = useState(false);
     const mouseEnter = () => {
         setOpenOptions(true);
@@ -10,10 +10,7 @@ function Header() {
     const mouseLeave = () => {
         setOpenOptions(false)
     }
-    const clickHandler = (e) => {
-        e.preventDefault();
-        console.log(e.target);
-    }
+
     return (
         <div className="header">
             <div className="header-title">

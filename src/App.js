@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import CardQuestion from "./components/CardQuestion";
 import Header from "./components/Header";
 
 function App() {
-
-
-  const mouseEnter = (e) => {
-    console.log("Hello")
+  const [idClick, setIdClick] = useState();
+  const clickHandler = (e) => {
+    e.preventDefault();
+    setIdClick(e.currentTarget.dataset.id);
   }
   return (
     <div className="App">
-      {/* <div onMouseEnter={mouseEnter}>Hello</div> */}
-      {/* <div onMouseLeave={mouseLeave}></div> */}
-      <Header />
+      <Header clickHandler={clickHandler} />
+      <div className="card-question">
+        <CardQuestion idChoose={idClick} />
+      </div>
     </div>
   );
 }

@@ -3,3 +3,8 @@
     padding:0;
     box-sizing: border-box;
 }
+.card-question{
+    position: fixed;
+    left: 9%;
+    margin-top:8%;
+}
