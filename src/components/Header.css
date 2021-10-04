@@ -4,17 +4,28 @@ img{
   margin-left: 10px; 
   border-radius: 15px;
 }
+p{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 5px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
 .header{
     color: #fff;
     display: flex;
     background-color: #4d4d4d;
     height: 15vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header-title{
     justify-content: start;
     margin-right:45%;
 }
 .title{
+    position: absolute;
     margin-top: 10px;
     margin-left: 5px;
     font-size: 30px;
@@ -23,13 +34,11 @@ img{
 }
 .options{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     cursor: pointer;
-    font-size: 22px;
     color: #fff;
-  
 }
 .choose{
-    font-size: 25px;
     margin-right: 5px;
+    font-size: 20px;
 }
