@@ -23,7 +23,7 @@
   text-align: center;
   border-bottom: 10px solid #af2b35;
   transform: rotateY(25deg);
-  height: 310px;
+  height: 400px;
   transform-style: preserve-3d;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .quiz__answer h1 span {
-  font-size: 1.15em;
+  font-size: 0.5em;
 }
 
 h1 {
@@ -106,5 +106,5 @@ h1 span i {
   font-weight: bold;
   cursor: pointer;
   font-size: 20px;
- 
+ margin-bottom: 20px;
 }
