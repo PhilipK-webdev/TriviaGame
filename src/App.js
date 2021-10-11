@@ -4,20 +4,23 @@ import CardQuestion from "./components/CardQuestion";
 import Header from "./components/Header";
 import axios from "axios"
 function App() {
-  const [idClick, setIdClick] = useState();
+  const [idClick, setIdClick] = useState("");
   const [objSport, setObjSport] = useState({});
   const [objMusic, setObjMusic] = useState({});
   const [objFilm, setObjFilm] = useState({});
   const [objTelevision, setObjTelevsion] = useState({});
   const clickHandler = (e) => {
     e.preventDefault();
-    setIdClick(e.currentTarget.dataset.id);
+    const id = e.currentTarget.dataset.id;
+    setIdClick(id);
+
   }
 
   useEffect(() => {
     generateAPI(idClick);
   }, [idClick])
   const generateAPI = (idClick) => {
+    console.log(idClick);
     if (idClick != undefined) {
       switch (idClick) {
         case "1":
@@ -42,27 +45,32 @@ function App() {
     console.log("SPORT");
     axios.get("https://opentdb.com/api.php?amount=10&category=21&type=multiple").then(({ data: { results } }) => {
       setObjSport(results);
-      console.log(results);
     }).catch(err => console.log(err))
   }
   const musicAPI = () => {
     console.log("MUSIC");
-    axios.get("https://opentdb.com/api.php?amount=10&category=12&type=multiple").then(({ data: { results } }) => { setObjMusic(results) }).catch(err => console.log(err))
+    axios.get("https://opentdb.com/api.php?amount=10&category=12&type=multiple").then(({ data: { results } }) => {
+      setObjMusic(results)
+    }).catch(err => console.log(err))
   }
   const filmAPI = () => {
     console.log("FILM");
-    axios.get("https://opentdb.com/api.php?amount=10&category=11").then(({ data: { results } }) => setObjFilm(results)).catch(err => console.log(err))
+    axios.get("https://opentdb.com/api.php?amount=10&category=11").then(({ data: { results } }) => {
+      setObjFilm(results);
+    }).catch(err => console.log(err))
   }
   const televisionAPI = () => {
     console.log("TELE");
-    axios.get("https://opentdb.com/api.php?amount=10&category=14").then(({ data: { results } }) => setObjTelevsion(results)).catch(err => console.log(err))
+    axios.get("https://opentdb.com/api.php?amount=10&category=14").then(({ data: { results } }) => {
+      setObjTelevsion(results);
+    }).catch(err => console.log(err))
   }
 
   return (
     <div className="App">
       <Header clickHandler={clickHandler} />
       <div className="card-question">
-        <CardQuestion objSport={objSport} />
+        <CardQuestion objSport={objSport} objFilm={objFilm} objMusic={objMusic} objTelevision={objTelevision} idClick={idClick} />
       </div>
     </div>
   );
