@@ -20,7 +20,7 @@ function App() {
     generateAPI(idClick);
   }, [idClick])
   const generateAPI = (idClick) => {
-    console.log(idClick);
+
     if (idClick != undefined) {
       switch (idClick) {
         case "1":
@@ -67,9 +67,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App"  >
       <Header clickHandler={clickHandler} />
-      <div className="card-question">
+      <div >
         <CardQuestion objSport={objSport} objFilm={objFilm} objMusic={objMusic} objTelevision={objTelevision} idClick={idClick} />
       </div>
     </div>

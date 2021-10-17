@@ -3,7 +3,7 @@
   position: relative;
   width: 200px;
   letter-spacing: 2px;
-  -webkit-font-smoothing: antialiased; 
+  -webkit-font-smoothing: always; 
   perspective: 600px;
 }
 
@@ -23,7 +23,7 @@
   text-align: center;
   border-bottom: 10px solid #af2b35;
   transform: rotateY(25deg);
-  height: 400px;
+  height: 100%;
   transform-style: preserve-3d;
 }
 
@@ -36,8 +36,8 @@
 }
 
 h1 {
-  font-size: 1.00em;
-  line-height: 2.5em;
+  font-size: 1.10em;
+ line-height: 1.5em;
   padding: 10px;
   color: #dadada;
   text-align: left;
@@ -74,7 +74,7 @@ h1 span i {
   border-radius: 10px;
   box-sizing: border-box;
   top: 0;
-  height: 370px;
+  height: 100%;
   line-height: 2em;
   position: absolute;
   left : 0;
@@ -83,6 +83,7 @@ h1 span i {
   width: 100%;
   z-index: -1; 
   transform: rotateY(-180deg);
+  overflow-y: hidden;
 }
 
 .quiz:hover .quiz__question {
@@ -101,10 +102,22 @@ h1 span i {
 
 .btn-next{
   padding: 10px;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   font-size: 20px;
  margin-bottom: 20px;
+ background-color: #dadada;
+}
+
+.card-question{
+  margin-top:2%;
+}
+.btn-div{
+  margin-top:7%;
+}
+.div-main{
+  display: flex;
+  justify-content: center;
 }

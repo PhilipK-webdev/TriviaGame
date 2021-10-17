@@ -11,10 +11,11 @@
     position: relative;
     width: 50%;
     margin: 0 auto;
-    /* height: auto; */
+    height: auto;
     min-height: 25vh;
-    margin-top: calc(100vh - 85vh - 20px);
-    background-color:#1164a8df;
+    margin-top: calc(100vh - 90vh - 30px);
+    margin-left: calc(100vh - 88vh);
+    background-color:rgb(1, 85, 153);
     border-radius: 4px;
     padding: 20px;
     border: 1px solid #999;

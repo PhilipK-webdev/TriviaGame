@@ -1,10 +1,9 @@
+html{
+    background-color: #0F0B16;
+}
 .App{
     margin:0;
     padding:0;
     box-sizing: border-box;
-}
-.card-question{
-    position: fixed;
-    left: 9%;
-    margin-top:2%;
+   
 }
