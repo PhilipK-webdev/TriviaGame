@@ -120,4 +120,12 @@ h1 span i {
 .div-main{
   display: flex;
   justify-content: center;
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .div-main{
+      margin-top: 25%;
+  }
+ 
 }

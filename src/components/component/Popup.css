@@ -22,4 +22,26 @@
     overflow: auto;
   }
    
-  
+  @media only screen and (max-width: 600px) {
+    .box{
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      height: auto;
+      margin-top: calc(100vh - 90vh - 30px);
+      margin-left: calc(100vh - 82vh);
+      background-color:rgb(1, 85, 153);
+      border-radius: 4px;
+      padding: 20px;
+      border: 1px solid #999;
+      overflow: auto;
+    }
+    .popup-box {
+      position: relative;
+      /* background: #00000050; */
+      width: 250px;
+      top: 0;
+      right: 10%;
+    }
+    
+}

@@ -1,0 +1,16 @@
+/* @media(max-width:100px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .header-title{
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        color:blue;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+} */
