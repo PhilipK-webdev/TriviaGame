@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import "../components/CardQuestion.css";
 function CardQuestion({ objSport, objMusic, objFilm, objTelevision, idClick }) {
     const [question, setQuestion] = useState();
@@ -16,7 +16,6 @@ function CardQuestion({ objSport, objMusic, objFilm, objTelevision, idClick }) {
             Object.keys(objFilm).length !== 0 ||
             Object.keys(objTelevision).length !== 0
         ) {
-            console.log(index);
             switch (idClick) {
                 case "1":
                     setQuestion(objSport[index].question.replace(/[^a-zA-Z ]/g, ""));
@@ -107,7 +106,7 @@ function CardQuestion({ objSport, objMusic, objFilm, objTelevision, idClick }) {
                     </div>
                     <div className="quiz__answer">
                         <h1 className="icon"><span><i className="fa fa-lightbulb-o" aria-hidden="true"></i>
-                        </span><p>{correctAnswer}</p></h1>
+                        </span><p className="correct-answer">{correctAnswer}</p></h1>
                     </div>
                 </div>
             </div>
@@ -115,6 +114,7 @@ function CardQuestion({ objSport, objMusic, objFilm, objTelevision, idClick }) {
                 <button className="btn-next" onClick={nextQuestion} disabled={!question ? true : false}>Next</button>
             </div>
         </div >
+
 
     )
 }

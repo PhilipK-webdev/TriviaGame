@@ -68,7 +68,9 @@ h1 span i {
   left: -10px;
   color: white;
 }
-
+.correct-answer:hover{
+  color:rgb(255, 127, 0);
+}
 .quiz__answer {
   padding-bottom: 50px;
   border-radius: 10px;

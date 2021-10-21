@@ -21,6 +21,10 @@
     border: 1px solid #999;
     overflow: auto;
   }
+
+  li:hover{
+    color: yellow;
+  }
    
   @media only screen and (max-width: 600px) {
     .box{

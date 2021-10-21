@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import CardQuestion from "./components/CardQuestion";
 import Header from "./components/Header";
-import axios from "axios"
+import axios from "axios";
+
+
 function App() {
   const [idClick, setIdClick] = useState("");
   const [objSport, setObjSport] = useState({});
@@ -13,7 +15,6 @@ function App() {
     e.preventDefault();
     const id = e.currentTarget.dataset.id;
     setIdClick(id);
-
   }
 
   useEffect(() => {
